@@ -36,6 +36,27 @@ namespace proniaTask.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("proniaTask.Models.OurProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OurProducts");
+                });
+
             modelBuilder.Entity("proniaTask.Models.Product", b =>
                 {
                     b.Property<int>("Id")

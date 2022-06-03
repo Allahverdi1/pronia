@@ -24,7 +24,8 @@ namespace proniaTask.Controllers
         {
             HomeVm homeVm = new HomeVm
             {
-                Sliders = await _context.Sliders.ToListAsync()
+                Sliders = await _context.Sliders.ToListAsync(),
+                OurProducts = await _context.OurProducts.ToListAsync(),
             };
             return View(homeVm);
         }
